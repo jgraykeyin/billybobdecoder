@@ -1,2 +1,2 @@
 # billybobdecoder
-Secret message coding game 
+Secret message coder game built in Python
