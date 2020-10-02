@@ -16,17 +16,24 @@ collection = ["Billy Bob rules the world!",
             "Billy Bob is going to have The Office removed from all streaming services by Monday afternoon"
             ]
 
-#startWords = "Billy Bob rules the world!"
+# Generate a random number that's within the limits of 0 and length of collection
+# This will let us grab a random sentence from the list
 x = random.randint(0,len(collection)-1)
 codeWords = collection[x]
 
+# Setup a list of letters to blank out
+# Maybe this list can grow to make the questions more difficult
 alpha = ["a","e","i","o","u","y"]
 
+# Replace chosen characters with *
 for i in alpha:
     codeWords = codeWords.replace(i,"*")
 
+# Setup any pre-loop variables that should be initialized
 sorryMessage = ""
 tries = 3
+
+# Start the game loop! End it if the tries go below 1 or "0" is typed
 while tries > 0:
     os.system('clear')
     print("Billy Bob Decodertron 1.0")
